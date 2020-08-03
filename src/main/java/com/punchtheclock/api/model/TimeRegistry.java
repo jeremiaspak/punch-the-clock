@@ -6,18 +6,25 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity()
 @EntityListeners(AuditingEntityListener.class)
 public class TimeRegistry {
 
+  public enum TYPE {
+    IN,
+    OUT
+  }
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
 
-  @NotBlank
-  private String type;
+  @NotNull
+  @Enumerated(EnumType.STRING)
+  private TYPE type;
 
   @CreatedDate
   @Column(name = "created_at", nullable = false, updatable = false)
@@ -50,11 +57,11 @@ public class TimeRegistry {
     this.user = user;
   }
 
-  public String getType() {
+  public TYPE getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(TYPE type) {
     this.type = type;
   }
 }

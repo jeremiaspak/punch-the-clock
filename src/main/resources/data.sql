@@ -22,7 +22,7 @@ INSERT INTO user (name, cpf, email, created_at) VALUES
   ('Maria', '98765432109', 'maria@punchtheclock.com', PARSEDATETIME('02-02-2020 09:18:38.00', 'dd-MM-yyyy hh:mm:ss.SS'));
 
 INSERT INTO time_registry (user_id, type, created_at) VALUES
-  (1, 'in', PARSEDATETIME('01-01-2020 09:12:34.00', 'dd-MM-yyyy hh:mm:ss.SS')),
-  (1, 'out', PARSEDATETIME('01-01-2020 13:13:43.00', 'dd-MM-yyyy hh:mm:ss.SS')),
-  (1, 'in', PARSEDATETIME('01-01-2020 14:13:52.00', 'dd-MM-yyyy hh:mm:ss.SS')),
-  (1, 'out', PARSEDATETIME('01-01-2020 18:31:47.00', 'dd-MM-yyyy hh:mm:ss.SS'));
+  (1, 'IN', PARSEDATETIME('01-01-2020 09:10:01.00', 'dd-MM-yyyy hh:mm:ss.SS')),
+  (1, 'OUT', PARSEDATETIME('01-01-2020 13:10:01.00', 'dd-MM-yyyy hh:mm:ss.SS')),
+  (1, 'IN', PARSEDATETIME('01-01-2020 14:10:01.00', 'dd-MM-yyyy hh:mm:ss.SS')),
+  (1, 'OUT', PARSEDATETIME('01-01-2020 18:15:06.00', 'dd-MM-yyyy hh:mm:ss.SS'));
